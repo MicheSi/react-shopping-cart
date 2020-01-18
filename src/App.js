@@ -15,10 +15,9 @@ function App() {
 	const [products] = useState(data);
 	const [cart, setCart] = useState([]);
 
-	const addItem = (e, item) => {
+	const addItem = item => {
 		// add the given item to the cart
-		e.preventDefault();
-		setCart(item);
+		setCart([...cart, item]);
 	};
 
 	return (
